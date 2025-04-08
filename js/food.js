@@ -43,3 +43,26 @@ for (const item of topMenuList) {
 }
 
 topMenuDOM.innerHTML = topMenuHTML;
+
+import { orderList } from "./orderlist.js";
+
+const orderItemsDOM = document.querySelector(".order-items");
+console.log(orderItemsDOM);
+
+let rightMenuHTML = "";
+
+for (const item of orderList) {
+  rightMenuHTML += `
+          <div class="order-item">
+            <img src="./img/pizza.webp" alt="pizza" />
+            <div class="order-text">
+              <h4>${item.name}</h4>
+              <p>Crust:${item.crust}</p>
+              <p>${item.price / 100} ${currency}</p>
+              <p><span>-</span> ${item.quantity} <span>+</span></p>
+            </div>
+          </div>
+          `;
+}
+
+orderItemsDOM.innerHTML = rightMenuHTML;
