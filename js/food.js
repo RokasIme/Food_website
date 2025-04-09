@@ -47,7 +47,6 @@ topMenuDOM.innerHTML = topMenuHTML;
 import { orderList } from "./orderlist.js";
 
 const orderItemsDOM = document.querySelector(".order-items");
-console.log(orderItemsDOM);
 
 let rightMenuHTML = "";
 
